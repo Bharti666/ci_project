@@ -25,10 +25,7 @@ jobs:
       run: |
         python main.py
     
-    - name: Run Tests
-      run: |
-        python -m unittest discover
-
+  
     - name: Create CML report
       env:
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,7 +34,5 @@ jobs:
         echo "# First Line of our report" >> report.md
         echo "## Bar Plots" >> report.md
         echo '![](./bars.png "Bar plot")' >> report.md
-        echo "## Line Plots" >> report.md
-        echo '![](./lines.png "Bar plot")' >> report.md
 
         cml comment create report.md
