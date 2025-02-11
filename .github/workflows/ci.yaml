@@ -31,11 +31,7 @@ jobs:
 
     - name: Create CML report
       env:
-<<<<<<< HEAD
-        REPO_TOKEN: ${{ secrets.github_token}}
-=======
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
->>>>>>> 2a9479fe200e6c23ef1b6a24a9ab7c156dbb6ee1
       run: |
 
         echo "# First Line of our report" >> report.md
